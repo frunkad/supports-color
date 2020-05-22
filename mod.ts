@@ -1,1 +1,1 @@
-export { supportColorCheck } from './index.ts';
+export { supportColorCheck } from "./index.ts";
