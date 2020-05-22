@@ -27,6 +27,10 @@ const checkSupportsColor = (
   const { args, env } = Deno;
   const parsedArgs = parse(args);
 
+  // Deno.noColor to be respected above all
+  // See https://no-color.org/
+  if (Deno.noColor) return 0;
+
   /**
      * forceColor
      * Forcefully set a color preference
@@ -52,9 +56,6 @@ const checkSupportsColor = (
   ) {
     forceColor = 1;
   }
-
-  // See https://no-color.org/
-  if (Deno.noColor) return 0;
 
   if (Deno.env.get("FORCE_COLOR") !== undefined) {
     if (Deno.env.get("FORCE_COLOR") === "true") {
