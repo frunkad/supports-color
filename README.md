@@ -33,7 +33,7 @@ if (supportsColor.stderr && supportsColor.stderr.has16m) {
 
 
 ### Ported Usage Methods
-If you porting another npm repo or your project needs --allow-env everywhere, you may use this method.
+If you are porting another npm repo or your project needs `--allow-env` everywhere, you may use this method.
 
 ```js
 import { supportsColor } from './ported.ts'
